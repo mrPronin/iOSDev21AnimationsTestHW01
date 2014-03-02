@@ -20,6 +20,18 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (UIColor*) randomColor {
+    CGFloat r = (CGFloat)(arc4random() % 256) / 255;
+    CGFloat g = (CGFloat)(arc4random() % 256) / 255;
+    CGFloat b = (CGFloat)(arc4random() % 256) / 255;
+    
+    return [UIColor colorWithRed:r green:g blue:b alpha:1.f];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
